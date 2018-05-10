@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.103/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  redis:
+    host: 10.0.125.237
+    port: 6379
+  jackson:
+    default-property-inclusion: non_null
+server:
+  context-path: /sell
+#redis-server.exe redis.windows.conf
+wechat:
+  mpAppId: wxd898fcb01713c658
+  mpAppSecret: 29d8a650db31472aa87800e3b0d739f2
+  openAppId: wxc12254f8d9d7b13c
+  openAppSecret: 9a70850b0d4f9b5e81a43b2be755e44b
+  mchId: 1409146202
+  mchKey: c976503d34ca432c601361f969fd8d85
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize: http://byqwa8.natappfree.cc
+  wechatOpenAuthorize: http://byqwa8.natappfree.cc
+  sell: http://byqwa8.natappfree.cc
+logging:
+  level:
+    com.sasa.sell.dataobject.mapper: trace
